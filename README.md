@@ -10,7 +10,7 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 <img src="src/assets/imagesApp/v1.1_one.PNG" alt="home & header" />
 <img src="src/assets/imagesApp/v1.1_second.PNG" alt="section" />
-<img src="src/assets/imagesApp/v1.three.PNG" alt="footer" />
+<img src="src/assets/imagesApp/v1.1_three.PNG" alt="footer" />
 
 **Version v1.0**
 ### `Home`
