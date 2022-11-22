@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Header () {
     return (
-        <div className="flex flex-row items-center w-[100%] h-[100%] px-2 py-4 shadow-xl">
+        <div className="flex flex-row items-center w-[100%] h-[100%] px-2 py-4 shadow-xl bg-white">
             <div className="flex flex-row justify-center items-center mr-auto ml-[10em]">
                 <p className="text-3xl text-slate-400 font-bold mx-2">MovieApp</p>
                 <ul className="flex flex-row justify-center items-center">
