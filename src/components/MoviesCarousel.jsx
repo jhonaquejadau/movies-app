@@ -3,12 +3,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import {AiFillStar} from "react-icons/ai"
 
-export const MoviesCarousel = ({movies, urls}) => {
-    console.log('data')
-    console.log(movies)
-    console.log(urls)
-    
-    const data = movies.upcoming && movies.upcoming.map(movie => {
+export const MoviesCarousel = ({upcoming, urls}) => {
+    const recentMovies = upcoming && upcoming.filter(movie => movie.release_date >= '2022-09-01')
+
+    const data = recentMovies.map(movie => {
         return (
             <div key={movie.id}>
                 <div className="h-[600px]">
