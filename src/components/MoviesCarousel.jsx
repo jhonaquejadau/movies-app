@@ -13,7 +13,7 @@ export const MoviesCarousel = ({upcoming, urls}) => {
                     <img className="block m-auto w-[100%]" src={urls.image + movie.backdrop_path} alt={movie.title} />
                 </div>
                 
-                <div className="flex flex-col items-start absolute bottom-0 w-[100%] h-[60%] p-12 bg-gradient-to-t from-black to-[rgba(0,0,0,0)]">
+                <div className="flex flex-col items-start absolute bottom-0 w-[100%] h-[60%] p-12 text-slate-200 bg-gradient-to-t from-black to-[rgba(0,0,0,0)]">
                     <p className="text-7xl mb-2 font-bold">{movie.original_title}</p>
                     <div className="flex flex-row items-center my-2 ">
                         <p className="text-[2rem] mr-4">{movie.release_date }</p>
@@ -30,7 +30,8 @@ export const MoviesCarousel = ({upcoming, urls}) => {
     
     return (
         <Carousel
-            transitionTime={10}
+            transitionTime={2000}
+            interval={5000}
             autoPlay={true}
             infiniteLoop={true}
             showArrows={true}

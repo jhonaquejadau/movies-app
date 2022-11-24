@@ -6,6 +6,12 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 # Screenshots
 
+**Version v1.2**
+<img src="src/assets/imagesApp/v1.2_one.PNG" alt="home & header" />
+<img src="src/assets/imagesApp/v1.2_second.PNG" alt="home section" />
+<img src="src/assets/imagesApp/v1.2_movie_detail.PNG" alt="movie detail" />
+<img src="src/assets/imagesApp/v1.2_movie_detail_section.PNG" alt="movie detail" />
+
 **Version v1.1**
 
 <img src="src/assets/imagesApp/v1.1_one.PNG" alt="home & header" />
@@ -19,6 +25,11 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 
 # Versions
+
+**v1.2**
+* Movie detail added.
+* Movie credits added.
+* New concept movie slider.
 
 **v1.1**
 * New upcoming movies carousel.
