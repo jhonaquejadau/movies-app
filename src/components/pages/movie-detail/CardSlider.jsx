@@ -1,10 +1,10 @@
 import React from "react";
 
-export const CardSlider = ({credits, urls}) => {
+export const CardSlider = ({credits, imagePath}) => {
     
-    const cardsData = credits.cast && credits.cast.map(credit => {
+    const cardsData = credits && credits.map(credit => {
         return {
-            image: urls.image + credit.profile_path,
+            image: imagePath.imageUrl('original',credit.profile_path),
             title: credit.name,
             description: credit.character
         }
@@ -14,7 +14,7 @@ export const CardSlider = ({credits, urls}) => {
         return cards && cards.map((card, index) => {
             return (
                 <div key={index} 
-                    className="card shadow"
+                    className="card shadow text-black"
                 >
                     <img src={card.image} alt={card.title}/>
                     <div className="flex flex-col items-center">

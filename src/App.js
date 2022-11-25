@@ -12,9 +12,9 @@ import {TvShows} from "./pages/TvShows"
 import './App.css';
 
 function App() {
-
+  
   return (
-    <div className="bg-gradient-to-t from-[#dfe9f3] to-white">
+    <div>
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>

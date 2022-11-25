@@ -26,6 +26,10 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 # Versions
 
+**v1.3**
+* Clean code.
+* Full responsive design.
+
 **v1.2**
 * Movie detail added.
 * Movie credits added.
