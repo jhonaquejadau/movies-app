@@ -1,9 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
+import { useEffect } from "react";
 import {Link} from "react-router-dom"
 
 export default function Header () {
+
+    const [changeNabvar, setChangeNavbar] = useState(false)
+    const handleBackground = () => {
+        return (window.scrollY > 50) ? setChangeNavbar(true) : setChangeNavbar(false) 
+    }
+
+    useEffect(() => {
+        handleBackground()
+        window.addEventListener("scroll", handleBackground)
+    }, [])
+
     return (
-        <header className="fixed z-10 top-0 left-0 w-[100%] text-slate-300 py-2 bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0)]">
+        <header className={`${changeNabvar ? 'bg-[rgba(0,0,0,0.8)]' : 'bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0)]'} fixed z-10 top-0 left-0 w-[100%] text-slate-300 py-2 `}>
             <div className="flex flex-row items-center w-[90%] h-full mx-auto">
                 <div className="flex flex-row mr-auto">
                     <Link to="/">

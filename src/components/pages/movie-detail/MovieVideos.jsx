@@ -1,11 +1,11 @@
 import React from "react";
 
-export const MovieVideos = ({movie, urls}) => {
+export const MovieVideos = ({movie}) => {
+    const trailer = movie && movie.filter(video => video.name === 'Official Trailer')
     return (
-        <div>
-            {/* <video src="https://www.youtube.com/watch?v=JaV7mmc9HGw" poster={`${urls && urls.image}bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg`}>
-                Black
-            </video> */}
+        <div dangerouslySetInnerHTML={{ __html: 
+            `<iframe width="100%" height="600" classname="" src=https://www.youtube.com/embed/${trailer && trailer[0].key}/>`}}
+        >
         </div>
     )
 }

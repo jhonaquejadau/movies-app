@@ -36,7 +36,7 @@ export const MoviesCarousel = ({upcoming, apiConfig}) => {
             interval={5000}
             autoPlay={true}
             infiniteLoop={true}
-            showArrows={false}
+            showArrows={true}
             showThumbs={false}
             showIndicators={true}
             showStatus={false}

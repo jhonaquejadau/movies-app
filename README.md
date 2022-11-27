@@ -6,6 +6,11 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 # Screenshots
 
+**Version v1.4**
+<img src="src/assets/imagesApp/v1.4_trending.PNG" alt="movies trending" />
+<img src="src/assets/imagesApp/v1.4_trending_tv.PNG" alt="tv shows trending" />
+<img src="src/assets/imagesApp/v1.4_video.PNG" alt="video" />
+
 **Version v1.2**
 <img src="src/assets/imagesApp/v1.2_one.PNG" alt="home & header" />
 <img src="src/assets/imagesApp/v1.2_second.PNG" alt="home section" />
@@ -26,9 +31,16 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 # Versions
 
+**v1.4**
+* Clean code.
+* Responsive design fixed bugs.
+* Daily trending section added.
+* Movies trailer added.
+* Nabvar scroll fixed.
+
 **v1.3**
 * Clean code.
-* Full responsive design.
+* Responsive design.
 
 **v1.2**
 * Movie detail added.

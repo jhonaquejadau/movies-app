@@ -11,7 +11,7 @@ export const MoviesSlider = ({movies, imagePath}) => {
         return movies && movies.map((movie,index) => {
             return (
                 <div onClick={handleScrollUp} key={index}
-                    className="movie-card hover:border-2 hover:border-purple-500"
+                    className="movie-card hover:border-2 hover:border-purple-500 p-[3px] rounded"
                 >
                     <Link to={`/movie-detail/${movie.id}`}>
                             <img src={imagePath.imageUrl('original',movie.poster_path)} alt={movie.original_title} />

@@ -14,7 +14,7 @@ export const CardSlider = ({credits, imagePath}) => {
         return cards && cards.map((card, index) => {
             return (
                 <div key={index} 
-                    className="card shadow text-black"
+                    className="card shadow text-black bg-white rounded"
                 >
                     <img src={card.image} alt={card.title}/>
                     <div className="flex flex-col items-center">
