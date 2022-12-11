@@ -1,34 +1,19 @@
 import React from "react";
-import { MoviesCarousel } from "../components/MoviesCarousel";
-import { useFetch } from "../hooks/useFetch";
+
 import { apiConfig } from "../api/apiConfig";
+import { useFetch } from "../hooks/useFetch";
+
+import { MoviesCarousel } from "../components/MoviesCarousel";
 import { MoviesSlider } from "../components/MoviesSlider";
-import { useState } from "react";
 import { TrendingSlider } from "../components/TrendingSlider";
+import { MoviesSearch } from "../components/pages/home/MoviesSearch";
 
 export default function Home(){
-
-    const [formData, setFormData] = useState({
-        title:""
-    });
 
     const upcoming = useFetch(apiConfig.category('movie','upcoming'))
     const popular = useFetch(apiConfig.category('movie', 'popular'))
     const trendingMovies = useFetch("https://api.themoviedb.org/3/trending/movie/day?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e")
     const trendingTvShows = useFetch("https://api.themoviedb.org/3/trending/tv/day?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e")
-    // const companies = ['DC Comics, Marvel, Warner Bross'].map( company => {
-    //     return useFetch(apiConfig.search('dc+comics',1))
-    // })
-
-    // console.log(companies)
-
-    const handleSearch = (event) => {
-        event.preventDefault();
-        const {name, value} = event.target;
-        setFormData({
-            [name]:value
-        })
-    }
 
     return (
         <div className="flex flex-col items-center w-[100%] h-full mx-auto text-slate-200">
@@ -38,22 +23,10 @@ export default function Home(){
                     <MoviesCarousel upcoming={upcoming} apiConfig={apiConfig} />
                 </div>
             </section>
-            <section className="w-full h-full flex flex-col items-center bg-gradient-to-b from-black to-purple-900">
-                <div className="w-[100%] py-4 px-[6em]">
-                    <p className="text-5xl text-slate-200 font-bold uppercase">welcome</p>
-                    <p className="text-3xl text-slate-200 mb-4">Movies, TV Shows, Peoples, and more...</p>
-                    <div className="relative flex flex-row justify-center items-center w-[90%] h-[3em] p-0 mb-8">
-                        <input 
-                            type="text"
-                            placeholder="Search for Movies, TV Shows, Person...."
-                            className="relative w-[100%] h-[100%] rounded-3xl px-8"
-                            name="title"
-                            value={formData.title}
-                            onChange={handleSearch}
-                        />
-                        <button className="absolute right-0 h-[100%] px-8 text-slate-200 font-bold rounded-3xl bg-gradient-to-r from-purple-900 to-purple-500">Search</button>
-                    </div>
-                </div>
+            {/* [#06070e] */}
+            <section className="w-full h-full flex flex-col items-center bg-gradient-to-b from-black to-[#030337]">
+                
+                <MoviesSearch />
 
                 <div className="w-[90%] p-2 bg-[rgba(255,255,255,0.1)] flex flex-col">
                     <TrendingSlider data={trendingMovies} apiConfig={apiConfig} type={'movies'} path={'movie-detail'}/>

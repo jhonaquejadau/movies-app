@@ -10,10 +10,10 @@ export const MoviesCarousel = ({upcoming, apiConfig}) => {
     const data = recentMovies.map(movie => {
         return (
             <div key={movie.id}>
-                <img className="relative block m-auto w-[100%] h-[700px] object-cover" src={apiConfig.imageUrl('original', movie.backdrop_path)} alt={movie.title} />
+                <img className="relative block m-auto w-[100%] h-[600px] object-cover object-top" src={apiConfig.imageUrl('original', movie.backdrop_path)} alt={movie.title} />
                 
-                <div className="flex flex-col items-start absolute bottom-0 p-12 text-slate-200 bg-gradient-to-t from-black to-[rgba(0,0,0,0)] w-[100%] h-[60%] max-[900px]:h-[45%]">
-                    <p className="text-5xl font-bold mt-[2em] max-[1200px]:text-2xl">{movie.original_title}</p>
+                <div className="flex flex-col items-start absolute bottom-0 p-12 text-slate-200 bg-gradient-to-t from-black to-[rgba(0,0,0,0)] w-[100%] h-[60%] max-[900px]:h-[45%] px-[6em]">
+                    <p className="text-5xl font-bold max-[1200px]:text-2xl">{movie.original_title}</p>
                     <div className="flex flex-row items-center my-2">
                         <p className="text-[1.5rem] mr-4">{movie.release_date }</p>
                         <div className="flex flex-row justify-center items-center border-2 px-2">
@@ -21,7 +21,7 @@ export const MoviesCarousel = ({upcoming, apiConfig}) => {
                             <p className="text-xl font-bold">{movie.vote_average}</p>
                         </div>
                     </div>
-                    <div className="w-[50%] text-left max-[900px]:hidden">{movie.overview }</div>
+                    <div className="w-[50%] text-left max-[900px]:hidden">{movie.overview}</div>
                     <Link to={`/movie-detail/${movie.id}`}>
                         <button className="px-6 py-2 font-bold text-xl uppercase bg-[rgba(255,255,255,0.3)] rounded mt-2 hover:border-2 hover:border-white">more info</button>
                     </Link>
