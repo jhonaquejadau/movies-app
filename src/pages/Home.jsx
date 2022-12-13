@@ -6,12 +6,13 @@ import { useFetch } from "../hooks/useFetch";
 import { MoviesCarousel } from "../components/MoviesCarousel";
 import { MoviesSlider } from "../components/MoviesSlider";
 import { TrendingSlider } from "../components/TrendingSlider";
-import { MoviesSearch } from "../components/pages/home/MoviesSearch";
+import { MultiSearch } from "../components/pages/home/MultiSearch";
 
 export default function Home(){
 
     const upcoming = useFetch(apiConfig.category('movie','upcoming'))
     const popular = useFetch(apiConfig.category('movie', 'popular'))
+    const rated = useFetch(apiConfig.category('movie', 'top_rated'))
     const trendingMovies = useFetch("https://api.themoviedb.org/3/trending/movie/day?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e")
     const trendingTvShows = useFetch("https://api.themoviedb.org/3/trending/tv/day?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e")
 
@@ -26,7 +27,7 @@ export default function Home(){
             {/* [#06070e] */}
             <section className="w-full h-full flex flex-col items-center bg-gradient-to-b from-black to-[#030337]">
                 
-                <MoviesSearch />
+                <MultiSearch />
 
                 <div className="w-[90%] p-2 bg-[rgba(255,255,255,0.1)] flex flex-col">
                     <TrendingSlider data={trendingMovies} apiConfig={apiConfig} type={'movies'} path={'movie-detail'}/>
@@ -38,7 +39,7 @@ export default function Home(){
                     <p className="text-2xl text-left mb-4 w-fit capitalize">what's upcoming</p>
                     <MoviesSlider movies={upcoming} imagePath={apiConfig}/>
                     <p className="text-2xl text-left mb-4 w-fit capitalize">top rated movies</p>
-                    <MoviesSlider movies={upcoming} imagePath={apiConfig}/>
+                    <MoviesSlider movies={rated} imagePath={apiConfig}/>
                 </div>
 
                 <div className="w-[90%] p-2 bg-[rgba(255,255,255,0.1)] flex flex-col">

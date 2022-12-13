@@ -17,7 +17,7 @@ export const TrendingSlider = ({data,apiConfig, type, path}) => {
                 {data && data.map((trend, index) => {
                     return (
                         <div key={index}
-                            className="movie-card relative w-[200px]"
+                            className="trending-card relative w-[200px] hover:scale-[1.04]"
                             onClick={handleScrollUp}
                         >
                             <Link to={`/${path}/${trend.id}`}>

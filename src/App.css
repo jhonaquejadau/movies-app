@@ -18,10 +18,14 @@
 }
 
 .movie-card {
+    flex: 1 0 200px;
+}
+
+.trending-card {
     flex: 1 0 250px;
 }
 
-.card, .movie-card {
+.card, .trending-card, .movie-card {
     margin-left: 0;
     margin-right: 1em;
     margin-bottom:1em;
