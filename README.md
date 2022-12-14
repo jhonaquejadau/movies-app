@@ -6,18 +6,27 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 # Screenshots
 
-**Version v1.4**
+**Version v1.8.0**
+<img src="src/assets/imagesApp/v1.8.0_serie.PNG" alt="serie" />
+<img src="src/assets/imagesApp/v1.8.0_serie_seasons.PNG" alt="serie seasons" />
+<img src="src/assets/imagesApp/v1.8.0_serie_similar.PNG" alt="series similiar" />
+
+**Version v1.5.0**
+<img src="src/assets/imagesApp/v1.5.0_home.PNG" alt="home" />
+<img src="src/assets/imagesApp/v1.5.0_search.PNG" alt="search" />
+
+**Version v1.4.0**
 <img src="src/assets/imagesApp/v1.4_trending.PNG" alt="movies trending" />
 <img src="src/assets/imagesApp/v1.4_trending_tv.PNG" alt="tv shows trending" />
 <img src="src/assets/imagesApp/v1.4_video.PNG" alt="video" />
 
-**Version v1.2**
+**Version v1.2.0**
 <img src="src/assets/imagesApp/v1.2_one.PNG" alt="home & header" />
 <img src="src/assets/imagesApp/v1.2_second.PNG" alt="home section" />
 <img src="src/assets/imagesApp/v1.2_movie_detail.PNG" alt="movie detail" />
 <img src="src/assets/imagesApp/v1.2_movie_detail_section.PNG" alt="movie detail" />
 
-**Version v1.1**
+**Version v1.1.0**
 
 <img src="src/assets/imagesApp/v1.1_one.PNG" alt="home & header" />
 <img src="src/assets/imagesApp/v1.1_second.PNG" alt="section" />
@@ -31,23 +40,41 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 # Versions
 
-**v1.4**
+
+
+**v1.8.0**
+* Tv shows detail bug fixed.
+* Responsive desing bugs fixed.
+
+**v1.7.0**
+* Tv shows detail beta.
+* Responsive desing.
+
+**v1.6.0**
+* Search input bugs fixed.
+
+**v1.5.0**
+* Search input fixed.
+* Movies tariler videos bug fixed.
+* Null & undefined images fixed.
+
+**v1.4.0**
 * Clean code.
 * Responsive design fixed bugs.
 * Daily trending section added.
 * Movies trailer added.
 * Nabvar scroll fixed.
 
-**v1.3**
+**v1.3.0**
 * Clean code.
 * Responsive design.
 
-**v1.2**
+**v1.2.0**
 * Movie detail added.
 * Movie credits added.
 * New concept movie slider.
 
-**v1.1**
+**v1.1.0**
 * New upcoming movies carousel.
 * New search component design.
 * Bugs fixed.

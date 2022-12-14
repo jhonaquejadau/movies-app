@@ -8,8 +8,6 @@ export const MoviesSlider = ({movies, imagePath}) => {
     }
     
     const movieContainer = (movies) => {
-        console.log('movies')
-        console.log(movies)
         return movies && movies.filter(movie => movie.poster_path !== null).map((movie,index) => {
             return (
                 <div onClick={handleScrollUp} key={index}
