@@ -11,7 +11,7 @@ export const CardSlider = ({credits, imagePath}) => {
     })
 
     const cardContainer = (cards) => {
-        return cards && cards.map((card, index) => {
+        return cards && cards.filter(card => card.image !== 'https://image.tmdb.org/t/p/originalnull').map((card, index) => {
             return (
                 <div key={index} 
                     className="card shadow text-black bg-white rounded"
