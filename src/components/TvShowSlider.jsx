@@ -2,7 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom"
 
 export const TvShowSlider = ({tvShows, imagePath}) => {
-    console.log(tvShows)
 
     const handleScrollUp = () => {
         window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -17,7 +16,6 @@ export const TvShowSlider = ({tvShows, imagePath}) => {
                     <Link to={`/tv-show-detail/${tvShow.id}`}>
                             <img className="h-[300px]" src={imagePath.imageUrl('original',tvShow.poster_path === null ? tvShow.backdrop_path : tvShow.poster_path)} alt={tvShow.name} />
                     </Link>
-                    {/* <p className="text-[1rem] text-slate-100 font-bold opacity-80">{tvShow.original_name}</p> */}
                 </div>
             )
         })
