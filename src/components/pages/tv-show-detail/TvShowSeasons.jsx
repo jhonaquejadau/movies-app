@@ -27,13 +27,14 @@ export const TvShowSeasons = ({tvShow, modal, setModal}) => {
                 <p className="capitalize"><span className="font-bold">episodes:</span>  {tvShow.number_of_episodes}</p>
             </div>
             <p className="text-2xl font-bold capitalize mt-6">seasons</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 h-full w-full">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 h-full w-full">
                 {tvShow.seasons.filter(season => season.poster_path !== null).map(season => {
                     return (
                         <div key={season.id}
                             onClick={() => handleModal(season.season_number)}
+                            className="w-[100%] h-[100%]"
                         >
-                            <img className="hover:scale-[1.02] h-full" src={apiConfig.imageUrl('original', season.poster_path)} alt={season.name} />
+                            <img className="hover:scale-[1.02] w-full h-full" src={apiConfig.imageUrl('original', season.poster_path)} alt={season.name} />
                         </div>
                     )
                 })} 
