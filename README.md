@@ -40,13 +40,17 @@ Movies website to find information about Movies, TV Shows and more. This is anot
 
 # Versions
 
-
+**v1.9.0**
+* Clean code.
+* Movies page content added.
 
 **v1.8.0**
+* Movie detail bug fixed.
 * Tv shows detail bug fixed.
 * Responsive desing bugs fixed.
 
 **v1.7.0**
+* Movie detail beta.
 * Tv shows detail beta.
 * Responsive desing.
 
