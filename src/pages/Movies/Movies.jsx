@@ -1,9 +1,8 @@
 import React from "react";
 
-import { useFetch } from "../../hooks/useFetch";
 import { apiConfig } from "../../api/apiConfig";
-import { TrendingSlider } from "../../components/TrendingSlider";
-import { MoviesSlider } from "../../components/MoviesSlider";
+import { MoviesSlider, TrendingSlider } from "../../components";
+import { useFetch } from "../../hooks/useFetch";
 
 const Movies = () => {
   const genres = [

@@ -3,11 +3,14 @@ import React from "react";
 import { apiConfig } from "../../api/apiConfig";
 import { useFetch } from "../../hooks/useFetch";
 
-import { MoviesCarousel } from "../../components/MoviesCarousel";
-import { MoviesSlider } from "../../components/MoviesSlider";
-import { TrendingSlider } from "../../components/TrendingSlider";
-import { MultiSearch } from "../../components/pages/home/MultiSearch";
-import { TvShowSlider } from "../../components/TvShowSlider";
+import { MultiSearch } from "../components";
+
+import {
+  MoviesCarousel,
+  MoviesSlider,
+  TrendingSlider,
+  TvShowSlider,
+} from "../../components";
 
 function Home() {
   const upcoming = useFetch(apiConfig.category("movie", "upcoming"));
