@@ -1,11 +1,11 @@
-import React, { useState, useEffect} from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { apiConfig } from "../api/apiConfig";
+import { apiConfig } from "../../api/apiConfig";
 
-import { MoviesSlider } from "../components/MoviesSlider";
-import { CardSlider } from "../components/pages/movie-detail/CardSlider";
-import MoviesBanner from "../components/pages/movie-detail/MoviesBanner";
-import { MovieVideos } from "../components/pages/movie-detail/MovieVideos";
+import { MoviesSlider } from "../../components/MoviesSlider";
+import { CardSlider } from "../../components/pages/movie-detail/CardSlider";
+import MoviesBanner from "../../components/pages/movie-detail/MoviesBanner";
+import { MovieVideos } from "../../components/pages/movie-detail/MovieVideos";
 
 import 'react-circular-progressbar/dist/styles.css';
 

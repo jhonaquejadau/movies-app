@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import { apiConfig } from "../api/apiConfig";
+import { apiConfig } from "../../api/apiConfig";
 
-import { Loader } from "../components/Loader";
-import {TvShowSlider} from "../components/TvShowSlider"
-import { TvShowBanner } from "../components/pages/tv-show-detail/TvShowBanner";
-import { TvShowSeasons } from "../components/pages/tv-show-detail/TvShowSeasons";
-import { SeasonDetail } from "../components/pages/tv-show-detail/SeasonDetail";
+import { Loader } from "../../components/Loader";
+import {TvShowSlider} from "../../components/TvShowSlider"
+import { TvShowBanner } from "../../components/pages/tv-show-detail/TvShowBanner";
+import { TvShowSeasons } from "../../components/pages/tv-show-detail/TvShowSeasons";
+import { SeasonDetail } from "../../components/pages/tv-show-detail/SeasonDetail";
 
 export const TvShowDetail = () => {
     

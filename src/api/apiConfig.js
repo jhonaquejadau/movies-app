@@ -7,7 +7,9 @@ const apiConfig = {
     category: (category,type) => `https://api.themoviedb.org/3/${category}/${type}?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&language=en-US`,
     detailUrl: (category,id, append_to_response) => `https://api.themoviedb.org/3/${category}/${id}?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&append_to_response=${append_to_response}`,
     search: (type,name) => `https://api.themoviedb.org/3/search/${type}?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&query=${name}`,
-    company: (query) => `https://api.themoviedb.org/3/search/company?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&query=${query}`
+    company: (query) => `https://api.themoviedb.org/3/search/company?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&query=${query}`,
+    genres: (type) => `https://api.themoviedb.org/3/genre/${type}/list?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&language=en-US`,
+    // `https://api.themoviedb.org/3/genre/movie/list?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&language=en-US`
 
 }
 
