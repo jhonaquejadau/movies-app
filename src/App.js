@@ -1,11 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Home, MovieDetail, Movies, TvShowDetail, TvShows } from "./pages";
-
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-
 import "./App.css";
+import { Footer, Header } from "./components";
+import { Home, MovieDetail, Movies, TvShowDetail, TvShows } from "./pages";
 
 function App() {
   return (
