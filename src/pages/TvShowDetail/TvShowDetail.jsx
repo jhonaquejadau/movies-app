@@ -15,13 +15,15 @@ export const TvShowDetail = () => {
 
   const getTvShowDetail = async (id) => {
     const res = await fetch(
-      `https://api.themoviedb.org/3/tv/${id}?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&language=en-US$&append_to_response=recommendations`
+      apiConfig.detailUrl(
+        "tv",
+        id,
+        "images,credits,reviews,videos,similar,recommendations"
+      )
     );
     const data = await res.json();
     setTvShow(data);
   };
-
-  console.log(modal);
 
   useEffect(() => {
     getTvShowDetail(id);

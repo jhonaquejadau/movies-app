@@ -7,9 +7,7 @@ import { Genres, MoviesSearch } from "../components";
 import { GenreContextProvider } from "./context";
 
 const Movies = () => {
-  const trending = useFetch(
-    "https://api.themoviedb.org/3/trending/movie/day?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e"
-  );
+  const trending = useFetch(apiConfig.trending('movies'));
   const popular = useFetch(apiConfig.category("movie", "popular"));
   const rated = useFetch(apiConfig.category("movie", "top_rated"));
   const dcComics = useFetch(apiConfig.search("movie", "dc"));

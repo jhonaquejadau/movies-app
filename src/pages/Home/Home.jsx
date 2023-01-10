@@ -18,12 +18,15 @@ function Home() {
   const rated = useFetch(apiConfig.category("movie", "top_rated"));
   const tvPopular = useFetch(apiConfig.category("tv", "popular"));
   const tvRated = useFetch(apiConfig.category("tv", "top_rated"));
-  const trendingMovies = useFetch(
-    "https://api.themoviedb.org/3/trending/movie/day?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e"
-  );
-  const trendingTvShows = useFetch(
-    "https://api.themoviedb.org/3/trending/tv/day?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e"
-  );
+  const trendingMovies = useFetch(apiConfig.trending('movie'));
+  const trendingTvShows = useFetch(apiConfig.trending('tv'));
+
+
+  const MYVAR = process.env
+  console.log('Variable')
+  console.log(MYVAR)
+  // console.log('ENV')
+  // console.log(process.env)
 
   return (
     <div className="flex flex-col items-center w-[100%] h-full mx-auto text-slate-200">

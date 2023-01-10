@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { React, useState } from "react";
-import { Link } from "react-router-dom";
+import { React, useEffect, useState } from "react";
 
 import { apiConfig } from "../../../api/apiConfig";
 
@@ -37,9 +35,7 @@ const MultiSearch = () => {
 
   // HOOK TO CONTROL API
   useEffect(() => {
-    {
-      formData && getMovieSearch(url);
-    }
+    formData && getMovieSearch(url);
   }, [url]);
 
   // RENDERING CONTENT
