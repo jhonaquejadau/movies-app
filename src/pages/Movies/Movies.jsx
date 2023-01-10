@@ -2,8 +2,8 @@ import React from "react";
 
 import { apiConfig } from "../../api/apiConfig";
 import { MoviesSlider, TrendingSlider } from "../../components";
-import { Genres } from "../components";
 import { useFetch } from "../../hooks/useFetch";
+import { Genres } from "../components";
 
 const Movies = () => {
   const trending = useFetch(
@@ -17,14 +17,19 @@ const Movies = () => {
 
   return (
     <div className="w-full h-full flex flex-col items-center bg-gradient-to-b from-black to-[#030337] text-slate-200">
-      <Genres/>
+      <Genres />
+      <div className="w-[90%] border-2 py-[8em] my-4">
+        <p className="font-bold text-xl text-center text-slate-600">
+          Select a genre or see default list below
+        </p>
+      </div>
       <div className="w-[100%] bg-[rgba(255,255,255,0.1)] flex flex-col my-[2em]">
         <TrendingSlider
           data={trending}
           apiConfig={apiConfig}
           type={"movies"}
           path={"movie-detail"}
-        />
+        />w
       </div>
       <div className="flex flex-col justify-start w-[95%] mx-auto max-[1200px]:w-[100%]">
         <p className="text-2xl capitalize">popular movies</p>
