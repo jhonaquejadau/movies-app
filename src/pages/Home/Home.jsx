@@ -22,12 +22,6 @@ function Home() {
   const trendingTvShows = useFetch(apiConfig.trending('tv'));
 
 
-  const MYVAR = process.env
-  console.log('Variable')
-  console.log(MYVAR)
-  // console.log('ENV')
-  // console.log(process.env)
-
   return (
     <div className="flex flex-col items-center w-[100%] h-full mx-auto text-slate-200">
       <section>
@@ -35,7 +29,6 @@ function Home() {
           <MoviesCarousel upcoming={upcoming} apiConfig={apiConfig} />
         </div>
       </section>
-      {/* [#06070e] */}
       <section className="w-full h-full flex flex-col items-center bg-gradient-to-b from-black to-[#030337]">
         <MultiSearch />
 
