@@ -74,3 +74,23 @@ Thanks to universe.io team to provide awesome complements for improve UI element
       51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
   }
 }
+
+/*STYLING SCROLLBAR*/
+/*STYLING SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+  background: #080916;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: purple; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: purple; 
+}

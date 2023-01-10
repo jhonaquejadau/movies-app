@@ -1,6 +1,4 @@
-// const API_KEY = "24f4aa2d151dcbaa881cb0b8a6be9c6e"
-
-const apiConfig = {
+export const apiConfig = {
     baseUrl: "https://api.themoviedb.org/3/movie/436270?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e",
     imageUrl: (size = 'original',path) => `https://image.tmdb.org/t/p/${size}${path}`,
     config: "https://api.themoviedb.org/3/configuration?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e",
@@ -9,8 +7,4 @@ const apiConfig = {
     search: (type,name) => `https://api.themoviedb.org/3/search/${type}?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&query=${name}`,
     company: (query) => `https://api.themoviedb.org/3/search/company?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&query=${query}`,
     genres: (type) => `https://api.themoviedb.org/3/genre/${type}/list?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&language=en-US`,
-    // `https://api.themoviedb.org/3/genre/movie/list?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&language=en-US`
-
 }
-
-export {apiConfig}
