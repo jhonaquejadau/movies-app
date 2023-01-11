@@ -6,10 +6,8 @@ import { apiConfig } from "../../../api/apiConfig";
 const SeasonDetail = ({ modal, setModal, tvId }) => {
   const [season, setSeason] = useState([]);
 
-  const getSeasonData = async (tv_id) => {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/tv/${tv_id}/season/${modal.season_number}?api_key=24f4aa2d151dcbaa881cb0b8a6be9c6e&language=en-US`
-    );
+  const getSeasonData = async (id) => {
+    const response = await fetch(apiConfig.season(id, modal.season_number));
     const data = await response.json();
     setSeason(data.episodes);
   };

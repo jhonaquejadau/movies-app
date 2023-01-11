@@ -16,4 +16,5 @@ export const apiConfig = {
     `https://api.themoviedb.org/3/discover/movie?api_key=${REACT_APP_API_URL}&with_genres=${id}`,
   trending: (type) =>
     `https://api.themoviedb.org/3/trending/${type}/day?api_key=${REACT_APP_API_URL}`,
+  season: (id,season) => `https://api.themoviedb.org/3/tv/${id}/season/${season}?api_key=${REACT_APP_API_URL}&language=en-US`,
 };
