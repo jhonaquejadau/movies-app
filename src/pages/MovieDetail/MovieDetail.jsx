@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { apiConfig } from "../../api/apiConfig";
-
-import { MoviesSlider } from "../../components";
+import { MoviesSlider, Loader } from "../../components";
 import { CardSlider, MoviesBanner, MovieVideos } from "../components";
-
 
 export const MovieDetail = () => {
   const { id } = useParams();
@@ -25,6 +23,8 @@ export const MovieDetail = () => {
   useEffect(() => {
     getMovieDetail(id);
   }, [id]);
+
+  if (movie.length === 0) return <Loader />;
 
   return (
     <section className="flex flex-col w-full h-full text-slate-200 text-xl font-[600]">

@@ -29,32 +29,30 @@ export const TvShowDetail = () => {
     getTvShowDetail(id);
   }, [id]);
 
-  if (tvShow.length === 0) {
-    return <Loader />;
-  } else {
-    return (
-      <section className="relative w-[100%] h-full text-slate-200 bg-gradient-to-b from-black to-[#030337]">
-        <TvShowBanner tvShow={tvShow} />
+  if (tvShow.length === 0) return <Loader />;
 
-        <div className="flex flex-col items-center w-full h-[100%] bg-gradient-to-b from-black to-[#030337] ">
-          <TvShowSeasons tvShow={tvShow} modal={modal} setModal={setModal} />
-          <div className="flex flex-col w-[90%] mt-6">
-            <p className="text-2xl capitalize my-2 font-bold">
-              {tvShow.recommendations.results.length > 0
-                ? "more like this"
-                : "there isn't recommendations for this serie..."}{" "}
-            </p>
-            <TvShowSlider
-              tvShows={tvShow.recommendations.results}
-              imagePath={apiConfig}
-            />
-          </div>
-        </div>
+  return (
+    <section className="relative w-[100%] h-full text-slate-200 bg-gradient-to-b from-black to-[#030337]">
+      <TvShowBanner tvShow={tvShow} />
 
-        <div className="flex justify-center items-center">
-          <SeasonDetail modal={modal} setModal={setModal} tvId={tvShow.id} />
+      <div className="flex flex-col items-center w-full h-[100%] bg-gradient-to-b from-black to-[#030337] ">
+        <TvShowSeasons tvShow={tvShow} modal={modal} setModal={setModal} />
+        <div className="flex flex-col w-[90%] mt-6">
+          <p className="text-2xl capitalize my-2 font-bold">
+            {tvShow.recommendations.results.length > 0
+              ? "more like this"
+              : "there isn't recommendations for this serie..."}{" "}
+          </p>
+          <TvShowSlider
+            tvShows={tvShow.recommendations.results}
+            imagePath={apiConfig}
+          />
         </div>
-      </section>
-    );
-  }
+      </div>
+
+      <div className="flex justify-center items-center">
+        <SeasonDetail modal={modal} setModal={setModal} tvId={tvShow.id} />
+      </div>
+    </section>
+  );
 };

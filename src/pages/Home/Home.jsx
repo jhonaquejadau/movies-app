@@ -1,10 +1,8 @@
 import React from "react";
-
 import { apiConfig } from "../../api/apiConfig";
 import { useFetch } from "../../hooks/useFetch";
-
 import { MultiSearch } from "../components";
-
+import { Loader } from "../../components";
 import {
   MoviesCarousel,
   MoviesSlider,
@@ -18,9 +16,10 @@ function Home() {
   const rated = useFetch(apiConfig.category("movie", "top_rated"));
   const tvPopular = useFetch(apiConfig.category("tv", "popular"));
   const tvRated = useFetch(apiConfig.category("tv", "top_rated"));
-  const trendingMovies = useFetch(apiConfig.trending('movie'));
-  const trendingTvShows = useFetch(apiConfig.trending('tv'));
+  const trendingMovies = useFetch(apiConfig.trending("movie"));
+  const trendingTvShows = useFetch(apiConfig.trending("tv"));
 
+  if (upcoming.length === 0) return <Loader />;
 
   return (
     <div className="flex flex-col items-center w-[100%] h-full mx-auto text-slate-200">
