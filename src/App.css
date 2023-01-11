@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+/**/
+#root {
+  background-color: #030337;
+}
+
 /*STYLING CREDITS CARDS*/
 .cards-container {
     display: flex;

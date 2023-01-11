@@ -30,7 +30,7 @@ const SeasonDetail = ({ modal, setModal, tvId }) => {
   return (
     <>
       {modal.state && (
-        <div className="absolute top-20 flex flex-col w-[90%] h-full bg-gradient-to-b from-black to-[#030337] border-4 p-4">
+        <div className="absolute z-50 top-20 flex flex-col w-[90%] h-full bg-gradient-to-b from-black to-[#030337] border-4 p-4">
           <div className="flex flex-row justify-end w-full text-3xl">
             <button onClick={() => handleModal()}>
               <AiOutlineClose />
@@ -39,7 +39,7 @@ const SeasonDetail = ({ modal, setModal, tvId }) => {
           <p className="w-full capitalize text-4xl mb-4">
             season {modal.season_number}
           </p>
-          <div className="grid grid-cols-3 gap-4 max-[1200px]:grid-cols-2 max-[1200px]:grid-cols-2">
+          <div className=" h-full grid grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4">
             {season &&
               season.map((season, index) => {
                 return (
