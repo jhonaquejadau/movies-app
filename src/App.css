@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+/*STYLING CREDITS CARDS*/
 .cards-container {
     display: flex;
     overflow-x: auto;
