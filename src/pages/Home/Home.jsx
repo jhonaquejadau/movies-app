@@ -1,14 +1,11 @@
 import React from "react";
 import { apiConfig } from "../../api/apiConfig";
+import {
+  Loader, MoviesCarousel, Slider, TrendingSlider,
+  TvShowSlider
+} from "../../components";
 import { useFetch } from "../../hooks/useFetch";
 import { MultiSearch } from "../components";
-import { Loader } from "../../components";
-import {
-  MoviesCarousel,
-  MoviesSlider,
-  TrendingSlider,
-  TvShowSlider,
-} from "../../components";
 
 function Home() {
   const upcoming = useFetch(apiConfig.category("movie", "upcoming"));
@@ -20,6 +17,8 @@ function Home() {
   const trendingTvShows = useFetch(apiConfig.trending("tv"));
 
   if (upcoming.length === 0) return <Loader />;
+  console.log('component mountes')
+  console.log(popular)
 
   return (
     <div className="flex flex-col items-center w-[100%] h-full mx-auto text-slate-200">
@@ -40,22 +39,23 @@ function Home() {
           />
         </div>
 
-        <div className="flex flex-col w-[90%] p-4 max-[900px]:w-[100%] max-[900px]:p-4">
+        <div className="flex flex-col w-[95%] max-[900px]:w-[100%] max-[900px]:p-4">
           <p className="text-2xl text-left mb-4 w-fit capitalize">
             what's popular
           </p>
-          <MoviesSlider movies={popular} imagePath={apiConfig} />
+          {/* <MoviesSlider movies={popular} imagePath={apiConfig} /> */}
+          <Slider data={popular}/>
           <p className="text-2xl text-left mb-4 w-fit capitalize">
             what's upcoming
           </p>
-          <MoviesSlider movies={upcoming} imagePath={apiConfig} />
+          <Slider movies={upcoming}/>
           <p className="text-2xl text-left mb-4 w-fit capitalize">
             top rated movies
           </p>
-          <MoviesSlider movies={rated} imagePath={apiConfig} />
+          <Slider movies={rated}/>
         </div>
 
-        <div className="w-[90%] p-2 bg-[rgba(255,255,255,0.1)] flex flex-col">
+        <div className="w-[95%] p-2 bg-[rgba(255,255,255,0.1)] flex flex-col">
           <TrendingSlider
             data={trendingTvShows}
             apiConfig={apiConfig}
@@ -63,7 +63,7 @@ function Home() {
             path={"tv-show-detail"}
           />
         </div>
-        <div className="flex flex-col w-[90%] p-4 max-[900px]:w-[100%] max-[900px]:p-4">
+        <div className="flex flex-col w-[95%] p-4 max-[900px]:w-[100%] max-[900px]:p-4">
           <p className="text-2xl text-left mb-4 w-fit capitalize">
             popular series
           </p>

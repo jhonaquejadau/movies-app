@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { apiConfig } from "../../api/apiConfig";
-import { MoviesSlider, Loader } from "../../components";
+import { Slider, Loader } from "../../components";
 import { CardSlider, MoviesBanner, MovieVideos } from "../components";
 
 export const MovieDetail = () => {
@@ -39,14 +39,12 @@ export const MovieDetail = () => {
 
         <div className="flex flex-col justify-start mx-auto w-full px-4 lg:px-10">
           <p className="capitalize">similar movies</p>
-          <MoviesSlider
-            movies={movie.similar && movie.similar.results}
-            imagePath={apiConfig}
+          <Slider
+            data={movie.similar.results}
           />
           <p className="capitalize">recommendations</p>
-          <MoviesSlider
-            movies={movie.recommendations && movie.recommendations.results}
-            imagePath={apiConfig}
+          <Slider
+            data={movie.recommendations.results}
           />
         </div>
       </div>

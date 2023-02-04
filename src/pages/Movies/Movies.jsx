@@ -1,7 +1,7 @@
 import React from "react";
 
 import { apiConfig } from "../../api/apiConfig";
-import { MoviesSlider, TrendingSlider, MoviesCarousel } from "../../components";
+import { Slider, TrendingSlider, MoviesCarousel } from "../../components";
 import { useFetch } from "../../hooks/useFetch";
 import { Genres, MoviesSearch } from "../components";
 import { GenreContextProvider } from "./context";
@@ -34,17 +34,17 @@ const Movies = () => {
         </div>
         <div className="flex flex-col justify-start w-[95%] mx-auto max-[1200px]:w-[100%]">
           <p className="text-xl font-bold mb-2 capitalize">popular movies</p>
-          <MoviesSlider movies={popular} imagePath={apiConfig} />
+          <Slider movies={popular} />
           <p className="text-xl font-bold mb-2 capitalize">top rated movies</p>
-          <MoviesSlider movies={rated} imagePath={apiConfig} />
+          <Slider movies={rated} />
           <p className="text-xl font-bold mb-2 capitalize">dc comics</p>
-          <MoviesSlider movies={dcComics} imagePath={apiConfig} />
+          <Slider movies={dcComics} />
           <p className="text-xl font-bold mb-2 capitalize">marvel universe</p>
-          <MoviesSlider movies={marvelComics} imagePath={apiConfig} />
+          <Slider movies={marvelComics} />
           <p className="text-xl font-bold mb-2 capitalize">warner world</p>
-          <MoviesSlider movies={warner} imagePath={apiConfig} />
+          <Slider movies={warner} />
           <p className="text-xl font-bold mb-2 capitalize">disney universe</p>
-          <MoviesSlider movies={disney} imagePath={apiConfig} />
+          <Slider movies={disney} />
         </div>
       </div>
     </GenreContextProvider>
